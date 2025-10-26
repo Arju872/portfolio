@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jenkins CI/CD Pipeline - Project Docs</title>
+  <link rel="stylesheet" href="../style.css">
+  <style>
+    body {
+      font-family: "Poppins", sans-serif;
+      line-height: 1.7;
+      background-color: #0a0a0a;
+      color: #f1f1f1;
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+      max-width: 1000px;
+      margin: 50px auto;
+      padding: 0 20px;
+    }
+    h1, h2, h3 {
+      color: #00bcd4;
+    }
+    img {
+      width: 100%;
+      border-radius: 10px;
+      margin: 15px 0;
+      box-shadow: 0 0 10px rgba(0,0,0,0.4);
+    }
+    .btn-back {
+      display: inline-block;
+      padding: 10px 20px;
+      background: #00bcd4;
+      color: #fff;
+      border-radius: 5px;
+      text-decoration: none;
+      margin-top: 30px;
+      transition: 0.3s;
+    }
+    .btn-back:hover {
+      background: #008c9e;
+    }
+    ul {
+      list-style-type: "✔ ";
+      margin-left: 20px;
+    }
+    .section {
+      margin-bottom: 40px;
+    }
+    pre {
+      background: #1a1a1a;
+      padding: 10px;
+      border-radius: 5px;
+      overflow-x: auto;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>🚀 Jenkins CI/CD Pipeline for Spring Boot Application</h1>
+
+    <div class="section">
+      <h2>📘 Introduction</h2>
+      <p>
+        This project demonstrates an end-to-end CI/CD pipeline using Jenkins for automating build, test, and deployment of a Spring Boot application. 
+        The pipeline integrates Docker and Kubernetes for containerized deployment, and uses Argo CD for promoting releases to production. 
+        It also incorporates DevOps practices like version control with Git, build automation with Maven, and code quality checks with SonarQube.
+      </p>
+    </div>
+
+    <div class="section">
+      <h2>🧰 Technologies Used</h2>
+      <ul>
+        <li>Jenkins</li>
+        <li>Docker</li>
+        <li>Kubernetes</li>
+        <li>Argo CD</li>
+        <li>Helm</li>
+        <li>Spring Boot (Java)</li>
+        <li>Maven</li>
+        <li>SonarQube</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2>⚙️ Step-by-Step Setup</h2>
+      <h3>Prerequisites</h3>
+      <ul>
+        <li>Java application code hosted on a Git repository</li>
+        <li>Jenkins server</li>
+        <li>Kubernetes cluster</li>
+        <li>Helm package manager</li>
+        <li>Argo CD installed</li>
+      </ul>
+
+      <h3>1️⃣ Install Jenkins Plugins</h3>
+      <ul>
+        <li>Git plugin</li>
+        <li>Maven Integration plugin</li>
+        <li>Pipeline plugin</li>
+        <li>Kubernetes Continuous Deploy plugin</li>
+      </ul>
+
+      <h3>2️⃣ Create Jenkins Pipeline</h3>
+      <ul>
+        <li>Create a new pipeline job in Jenkins and configure the Git repository URL.</li>
+        <li>Add a <code>Jenkinsfile</code> to the Git repository to define pipeline stages.</li>
+      </ul>
+
+      <h3>3️⃣ Define Pipeline Stages</h3>
+      <ul>
+        <li>Checkout source code from Git</li>
+        <li>Build Java application using Maven</li>
+        <li>Run unit tests with JUnit and Mockito</li>
+        <li>Run SonarQube analysis for code quality</li>
+        <li>Package application into a JAR file</li>
+        <li>Deploy to test environment using Helm</li>
+        <li>Run user acceptance tests (e.g., Selenium)</li>
+        <li>Promote application to production using Argo CD</li>
+      </ul>
+
+      <h3>4️⃣ Configure Jenkins Pipeline</h3>
+      <ul>
+        <li>Use Git plugin for checkout</li>
+        <li>Maven Integration plugin to build & package</li>
+        <li>JUnit & Mockito plugins for unit testing</li>
+        <li>SonarQube plugin for code quality</li>
+        <li>Kubernetes Continuous Deploy plugin for Helm deployments</li>
+        <li>Integrate Argo CD API token into Jenkins credentials</li>
+      </ul>
+
+      <h3>5️⃣ Set Up Argo CD</h3>
+      <ul>
+        <li>Install Argo CD on Kubernetes cluster</li>
+        <li>Set up Git repository for Argo CD to track Helm charts and manifests</li>
+        <li>Create Helm chart for Java application including Kubernetes manifests and values</li>
+        <li>Add Helm chart to Git repository tracked by Argo CD</li>
+      </ul>
+
+      <h3>6️⃣ Run Jenkins Pipeline</h3>
+      <ul>
+        <li>Trigger the pipeline to start CI/CD</li>
+        <li>Monitor stages and fix issues if any arise</li>
+      </ul>
+    </div>
+
+    <!--<div class="section">
+      <h2>🖼️ Screenshots</h2>
+      <img src="../images/jenkins-cicd-1.png" alt="Jenkins Pipeline Screenshot">
+      <img src="../images/jenkins-cicd-2.png" alt="Argo CD Deployment Screenshot">
+      <img src="../images/jenkins-cicd-3.png" alt="Kubernetes Deployment Screenshot">
+    </div>-->
+
+    <div class="section">
+      <h2>📊 Results</h2>
+      <p>
+        The Jenkins pipeline successfully automates build, test, and deployment of the Spring Boot application. 
+        Integration with Docker, Kubernetes, and Argo CD allows seamless containerized deployments and production promotion, 
+        demonstrating a complete DevOps workflow.
+      </p>
+    </div>
+
+    <a href="../index.html" class="btn-back">← Back to Portfolio</a>
+  </div>
+</body>
+</html>

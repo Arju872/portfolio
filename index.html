@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Arjun Krishnan A — Portfolio</title>
+
+  <!-- Google font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav container">
+      <div class="brand">Arjun Krishnan A</div>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#certifications">Certifications</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- HERO -->
+  <section id="hero" class="hero">
+    <div class="hero-inner container">
+      <div class="hero-left">
+        <h1>Hi, I'm Arjun</h1>
+        <p class="hero-sub"> <span id="typewriter"></span></p>
+
+        <div class="cta">
+          <a class="btn primary" href="#projects">View Projects</a>
+          <a class="btn ghost" href="resume.pdf" download>Download Resume</a>
+        </div>
+      </div>
+
+      <div class="hero-card">
+        <img src="images/arjun-profile.png" alt="Arjun profile" class="profile-large" />
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="section about container">
+    <div class="about-inner">
+      <div class="about-text">
+        <h2>About</h2>
+        <p>
+          I'm Arjun Krishnan, passionate Web Developer with expertise in modern web technologies, SEO, and a growing focus on DevOps and Cloud. Skilled in AWS (EC2, S3, Lambda), Docker, Kubernetes, Jenkins, GitHub Actions, and Terraform for scalable deployments and CI/CD automation. Exploring Generative AI in DevOps to build smarter, automated workflows.
+        </p>
+      </div>
+
+      <div class="about-img">
+        <div class="avatar-wrap">
+          <img src="images/arjun-profile-small.png" alt="Arjun small" class="avatar" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills" class="section skills container">
+    <h2 class="section-title">Skills</h2>
+
+    <div class="skills-grid">
+      <div class="skills-col">
+        <h3>DevOps & Cloud Tools</h3>
+        <div class="skill-row">
+          <span class="skill-name">Kubernetes</span>
+          <div class="bar">
+            <div class="bar-fill" data-fill="90%"></div>
+          </div>
+        </div>
+        <div class="skill-row">
+          <span class="skill-name">Docker</span>
+          <div class="bar">
+            <div class="bar-fill" data-fill="90%"></div>
+          </div>
+        </div>
+        <div class="skill-row">
+          <span class="skill-name">CI/CD</span>
+          <div class="bar">
+            <div class="bar-fill" data-fill="80%"></div>
+          </div>
+        </div>
+        <div class="skill-row">
+          <span class="skill-name">Jenkins</span>
+          <div class="bar">
+            <div class="bar-fill" data-fill="80%"></div>
+          </div>
+        </div>
+        <div class="skill-row">
+          <span class="skill-name">AWS</span>
+          <div class="bar">
+            <div class="bar-fill" data-fill="80%"></div>
+          </div>
+        </div>
+        <div class="skill-row">
+          <span class="skill-name">Terraform</span>
+          <div class="bar">
+            <div class="bar-fill" data-fill="80%"></div>
+          </div>
+        </div>
+        <div class="skill-row">
+          <span class="skill-name">Ansible</span>
+          <div class="bar">
+            <div class="bar-fill" data-fill="80%"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="skills-col">
+        <h3>Programming & Scripting</h3>
+        <div class="skill-row">
+          <span class="skill-name">Python</span>
+          <div class="bar">
+            <div class="bar-fill" data-fill="80%"></div>
+          </div>
+        </div>
+        <div class="skill-row">
+          <span class="skill-name">Java</span>
+          <div class="bar">
+            <div class="bar-fill" data-fill="80%"></div>
+          </div>
+        </div>
+        <div class="skill-row">
+          <span class="skill-name">Node.js</span>
+          <div class="bar">
+            <div class="bar-fill" data-fill="65%"></div>
+          </div>
+        </div>
+        <div class="skill-row">
+          <span class="skill-name">C</span>
+          <div class="bar">
+            <div class="bar-fill" data-fill="80%"></div>
+          </div>
+        </div>
+        <div class="skill-row">
+          <span class="skill-name">C++</span>
+          <div class="bar">
+            <div class="bar-fill" data-fill="80%"></div>
+          </div>
+        </div>
+        <div class="skill-row">
+          <span class="skill-name">Shell Scripting</span>
+          <div class="bar">
+            <div class="bar-fill" data-fill="80%"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects" class="section projects container">
+    <h2 class="section-title">Projects</h2>
+
+    <div class="projects-grid">
+      <!-- PROJECT 1 -->
+      <article class="project-card">
+        <img src="images/eks-ingress.png" alt="AWS EKS Ingress Project Screenshot" class="project-img">
+        <h4>Deploy Application on Kubernetes (AWS EKS) using Ingress</h4>
+        <p>Deployed a containerized web application on AWS EKS using Kubernetes, configuring Ingress Controller for efficient traffic management and load balancing.</p>
+        <p class="tech">AWS EKS · Kubernetes · Ingress Controller</p>
+        <div class="project-links">
+          <a class="btn icon" href="https://github.com/Arju872/" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+          <a class="btn ghost" href="projects/eks-ingress.html" target="_blank">Docs</a>
+        </div>
+      </article>
+
+      <!-- PROJECT 2 -->
+      <article class="project-card">
+        <img src="images/mern-docker.png" alt="MERN Docker Compose Project Screenshot" class="project-img">
+        <h4>MERN Stack Application using Docker Compose</h4>
+        <p>Built and containerized a full-stack MERN application using Docker Compose for multi-container orchestration and seamless service integration.</p>
+        <p class="tech">MongoDB · Express · React · Node.js · Docker Compose</p>
+        <div class="project-links">
+          <a class="btn icon" href="https://github.com/Arju872/MERN-DOCKER-COMPOSE" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+          <a class="btn ghost" href="projects/mern-docker-compose.html" target="_blank">Docs</a>
+        </div>
+      </article>
+
+      <!-- PROJECT 3 -->
+      <article class="project-card">
+        <img src="images/jenkins-cicd.png" alt="Spring Boot Jenkins Pipeline Screenshot" class="project-img">
+        <h4>CI/CD Pipeline for Spring Boot Application using Jenkins</h4>
+        <p>Implemented an automated CI/CD pipeline with Jenkins, Docker, and Argo CD to build and deploy a Spring Boot app on Kubernetes.</p>
+        <p class="tech">Jenkins · Docker · Argo CD · Kubernetes</p>
+        <div class="project-links">
+          <a class="btn icon" href="https://github.com/Arju872/CI-CD-PIPELINE-JENKINS-SPRINGBOOT" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+          <a class="btn ghost" href="projects/jenkins-cicd.html" target="_blank">Docs</a>
+        </div>
+      </article>
+
+      <!-- PROJECT 4 -->
+      <article class="project-card">
+        <img src="images/terraform-eks.png" alt="Terraform EKS Cluster Project Screenshot" class="project-img">
+        <h4>Create EKS Cluster with VPC using Terraform</h4>
+        <p>Automated AWS EKS cluster creation using Terraform, including custom VPC, subnets, and node groups for scalable infrastructure provisioning.</p>
+        <p class="tech">Terraform · AWS EKS · VPC</p>
+        <div class="project-links">
+          <a class="btn icon" href="https://github.com/Arju872" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+          <a class="btn ghost" href="projects/terraform-eks.html" target="_blank">Docs</a>
+        </div>
+      </article>
+
+      <!-- PROJECT 5 -->
+      <article class="project-card">
+        <img src="images/django-docker.png" alt="Django Docker Project Screenshot" class="project-img">
+        <h4>Docker Containerization for Django</h4>
+        <p>Containerized a Django web application using Docker, simplifying deployment and improving portability across different environments.</p>
+        <p class="tech">Django · Docker · Nginx</p>
+        <div class="project-links">
+          <a class="btn icon" href="https://github.com/Arju872/Docker_Django_Project" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+          <a class="btn ghost" href="projects/django-docker.html" target="_blank">Docs</a>
+        </div>
+      </article>
+    </div>
+  </section>
+<!-- WORK EXPERIENCE -->
+<section id="experience" class="section experience container">
+  <h2 class="section-title">Work Experience</h2>
+
+  <div class="projects-grid">
+    <!-- EXPERIENCE CARD -->
+    <article class="project-card">
+      
+      <h4>Web Developer — HOMEADDA, Bangalore</h4>
+      <p class="exp-duration"><i class="fa-regular fa-calendar"></i> November 2024 – Present</p>
+      <ul class="exp-points">
+        <li>Develop responsive, user-friendly websites using <strong>HTML</strong>, <strong>CSS</strong>, <strong>JavaScript</strong>, and <strong>PHP</strong>.</li>
+        <li>Ensure smooth user experience and efficient backend logic with database integration.</li>
+        <li>Optimize website performance and SEO to improve loading speed and search visibility.</li>
+        <li>Manage website hosting and secure file transfers with <strong>FileZilla</strong>, ensuring stable deployments.</li>
+      </ul>
+      <div class="project-links">
+        <a class="btn icon" href="https://www.homeadda.co.in/" target="_blank">
+          <i class="fa-solid fa-link"></i> Company Site
+        </a>
+       
+      </div>
+    </article>
+  </div>
+</section>
+
+
+
+  <!-- EDUCATION -->
+ 
+<section id="education" class="section education container">
+  <h2 class="section-title">Education</h2>
+
+  <div class="education-grid">
+    <div class="education-card">
+      <i class="fa-solid fa-graduation-cap icon"></i>
+      <div>
+        <h4>Master of Computer Application</h4>
+        <p class="edu-inst">Presidency College, Bengaluru, Karnataka</p>
+        <p class="edu-year">2022 – 2024</p>
+      </div>
+    </div>
+
+    <div class="education-card">
+      <i class="fa-solid fa-university icon"></i>
+      <div>
+        <h4>Bachelor of Science in Physics</h4>
+        <p class="edu-inst">St. Berchmans College Autonomous, Kerala</p>
+        <p class="edu-year">2018 – 2021</p>
+      </div>
+    </div>
+
+    <div class="education-card">
+      <i class="fa-solid fa-laptop-code icon"></i>
+      <div>
+        <h4>Diploma in Computer Application (DMCA)</h4>
+        <p class="edu-inst">Centre of Vocational Courses, Kottayam, Kerala</p>
+        <p class="edu-year">2021 – 2022</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+  <!-- CERTIFICATIONS -->
+<section id="certifications" class="section certifications container">
+  <h2 class="section-title">Certifications</h2>
+
+  <div class="certifications-grid">
+    <div class="certification-card">
+      <i class="fa-brands fa-aws icon"></i>
+      <h4>AWS Certified Cloud Practitioner</h4>
+      <p>Amazon Web Services (AWS)</p>
+    </div>
+
+    <div class="certification-card">
+      <i class="fa-solid fa-brain icon"></i>
+      <h4>DevOps & Generative AI</h4>
+      <p>Udemy</p>
+    </div>
+
+    <div class="certification-card">
+      <i class="fa-brands fa-ibm icon"></i>
+      <h4>IBM DevOps Fundamentals Professional Certificate</h4>
+      <p>Coursera</p>
+    </div>
+  </div>
+</section>
+
+
+  <!-- CONTACT -->
+<section id="contact" class="section contact container">
+  <h2 class="section-title">Contact</h2>
+
+  <div class="contact-wrap">
+    <div class="contact-info card">
+      <h4>Contact Information</h4>
+      <p><strong>Name:</strong> Arjun Krishnan A</p>
+      <p><strong>Phone:</strong> <a href="tel:+917034517953">+91 70345 17953</a></p>
+      <p><strong>Email:</strong> 
+        <a href="mailto:arjunanjilickal@gmail.com">arjunanjilickal@gmail.com</a>
+      </p>
+
+      <h4 class="find-title">Find me on</h4>
+      <p><a href="https://github.com/Arju872/" target="_blank"><i class="fab fa-github"></i> GitHub</a></p>
+      <p><a href="https://www.linkedin.com/in/arjun-krishnan-a/" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a></p>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+  <footer class="site-footer">
+    <div class="container">© 2025 Arjun Krishnan — All rights reserved</div>
+  </footer>
+
+
+</body>
+</html>
+

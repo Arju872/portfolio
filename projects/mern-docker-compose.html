@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MERN Stack Docker Compose Setup - Project Docs</title>
+  <link rel="stylesheet" href="../style.css">
+  <style>
+    body {
+      font-family: "Poppins", sans-serif;
+      line-height: 1.7;
+      background-color: #0a0a0a;
+      color: #f1f1f1;
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+      max-width: 1000px;
+      margin: 50px auto;
+      padding: 0 20px;
+    }
+    h1, h2, h3 {
+      color: #00bcd4;
+    }
+    img {
+      width: 100%;
+      border-radius: 10px;
+      margin: 15px 0;
+      box-shadow: 0 0 10px rgba(0,0,0,0.4);
+    }
+    .btn-back {
+      display: inline-block;
+      padding: 10px 20px;
+      background: #00bcd4;
+      color: #fff;
+      border-radius: 5px;
+      text-decoration: none;
+      margin-top: 30px;
+      transition: 0.3s;
+    }
+    .btn-back:hover {
+      background: #008c9e;
+    }
+    ul {
+      list-style-type: "✔ ";
+      margin-left: 20px;
+    }
+    .section {
+      margin-bottom: 40px;
+    }
+    pre {
+      background: #1a1a1a;
+      padding: 10px;
+      border-radius: 5px;
+      overflow-x: auto;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>🚀 MERN Stack Application using Docker Compose</h1>
+
+    <div class="section">
+      <h2>📘 Introduction</h2>
+      <p>
+        This project demonstrates a simple MERN stack application deployed using Docker containers and Docker Compose. 
+        It shows how to run MongoDB, Node.js backend, and React frontend in isolated containers connected via a Docker network.
+      </p>
+    </div>
+
+    <div class="section">
+      <h2>🧰 Technologies Used</h2>
+      <ul>
+        <li>MongoDB</li>
+        <li>Express.js</li>
+        <li>React.js</li>
+        <li>Node.js</li>
+        <li>Docker & Docker Compose</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2>⚙️ Step-by-Step Setup</h2>
+
+      <h3>1️⃣ Create a Docker Network</h3>
+      <pre><code>docker network create demo</code></pre>
+
+      <h3>2️⃣ Build and Run Frontend</h3>
+      <pre><code>cd mern/frontend
+docker build -t mern-frontend .
+docker run --name=frontend --network=demo -d -p 5173:5173 mern-frontend</code></pre>
+      <p>Verify the client is running by opening: <a href="http://localhost:5173" target="_blank">http://localhost:5173</a></p>
+
+      <h3>3️⃣ Run MongoDB Container</h3>
+      <pre><code>docker run --network=demo --name mongodb -d -p 27017:27017 -v ~/opt/data:/data/db mongo:latest</code></pre>
+
+      <h3>4️⃣ Build and Run Backend</h3>
+      <pre><code>cd mern/backend
+docker build -t mern-backend .
+docker run --name=backend --network=demo -d -p 5050:5050 mern-backend</code></pre>
+
+      <h3>5️⃣ Using Docker Compose</h3>
+      <pre><code>docker compose up -d</code></pre>
+      <p>
+        This command automatically starts all containers (frontend, backend, and MongoDB) using the provided <code>docker-compose.yml</code> file.
+      </p>
+    </div>
+
+   <!-- <div class="section">
+      <h2>🖼️ Screenshots</h2>
+      <img src="../images/mern-docker.png" alt="Docker Compose Project Screenshot">
+      <img src="../images/mern-docker-frontend.png" alt="React Frontend Screenshot">
+      <img src="../images/mern-docker-backend.png" alt="Backend API Screenshot">
+    </div>-->
+
+    <div class="section">
+      <h2>📊 Results</h2>
+      <p>
+        The MERN stack application runs successfully in Docker containers, allowing seamless communication between frontend, backend, and database. 
+        Docker Compose ensures an easy setup and reproducibility across environments.
+      </p>
+    </div>
+
+    <a href="../index.html" class="btn-back">← Back to Portfolio</a>
+  </div>
+</body>
+</html>
+
